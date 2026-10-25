@@ -36,7 +36,7 @@ jobs:
           - os: macos-latest
             cmake_generator: Ninja
             sdk_triple: macos-arm64
-          - os: ubuntu-latest
+          - os: ubuntu-24.04
             cmake_generator: Ninja
             sdk_triple: linux-x86_64
           - os: windows-2022
@@ -55,7 +55,7 @@ jobs:
         run: echo "MACOSX_DEPLOYMENT_TARGET=13.0" >> "$GITHUB_ENV"
 
       - name: Install Linux window-system development packages
-        if: matrix.os == 'ubuntu-latest'
+        if: matrix.os == 'ubuntu-24.04'
         run: |
           sudo apt-get update
           sudo apt-get install --no-install-recommends -y \
@@ -102,7 +102,7 @@ jobs:
     name: publish release assets (single tag)
     if: inputs.publish
     needs: [vtk]
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v7

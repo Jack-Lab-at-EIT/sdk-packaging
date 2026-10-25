@@ -12,7 +12,7 @@
 | SDK artifacts (OCCT+Netgen) | OCCT 8.0.1 and Netgen 6.2.2604 | `sdk-occt-netgen-8.0.1-6.2.2604` |
 | SDK artifacts (GoogleTest) | GoogleTest 1.18.0 | `sdk-googletest-1.18.0` |
 
-每条 workflow 都会构建并自检三个平台的归档。将 `publish` 设为 `true` 后，只有全部平台任务成功，才会全量替换对应 Release 的资产。每个归档都附带同名 `.sha256` 校验文件。`tools/sdk/releases/` 记录源码固定版本、构建选项和许可证。
+每条 workflow 都会构建并自检三个平台的归档。Linux SDK 固定在 Ubuntu 24.04 / GCC 13 上生产，以保持对 glibc 2.39 及更新运行环境的兼容。将 `publish` 设为 `true` 后，只有全部平台任务成功，才会全量替换对应 Release 的资产。每个归档都附带同名 `.sha256` 校验文件。`tools/sdk/releases/` 记录源码固定版本、构建选项和许可证。
 
 ## 本地 CMake 入口
 

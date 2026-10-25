@@ -1,5 +1,7 @@
 CI 按冻结的构建描述生产预编译 OCCT 与 Netgen SDK。消费仓库应根据归档旁的 `.sha256` 文件固定下载内容。
 
+Linux SDK 固定由 Ubuntu 24.04 / GCC 13 生产，兼容基线为 glibc 2.39。
+
 ## 为何合并发布
 
 Netgen 以 `USE_OCC=ON` 构建时在 C++ 层直接链接 OCCT（`ngcore`/`nglib` 的

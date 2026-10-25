@@ -2,6 +2,8 @@ CI 为 macOS arm64、Linux x86_64 和 Windows x86_64 构建并自检 GoogleTest 
 SDK。每个归档都包含上游 CMake 包、头文件、静态库、源码元数据和 BSD-3-Clause
 许可证。消费仓库应根据归档旁的 `.sha256` 文件固定下载内容。
 
+Linux 静态 SDK 在 Ubuntu 24.04 / GCC 13 上生产。
+
 ## 源码与构建
 
 - 上游：<https://github.com/google/googletest>
