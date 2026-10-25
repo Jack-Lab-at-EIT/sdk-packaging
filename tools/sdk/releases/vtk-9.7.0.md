@@ -1,6 +1,8 @@
 CI 按 `tools/sdk/vtk.cmake` 中冻结的构建描述生产预编译 VTK SDK。
 SDK 提供 `RenderingWebGPU`、标注模块 `RenderingAnnotation`（`vtkScalarBarActor` 等）与平台原生窗口（Linux Wayland、macOS Cocoa、Windows Win32）。消费仓库应根据归档旁的 `.sha256` 文件固定下载内容。
 
+Linux SDK 固定由 Ubuntu 24.04 / GCC 13 生产，兼容基线为 glibc 2.39。
+
 ## 源码与可复现性
 
 - CI 源码与依赖均来自 GitHub：<https://github.com/Kitware/VTK.git>、

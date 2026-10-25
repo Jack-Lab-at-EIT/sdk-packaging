@@ -28,7 +28,7 @@ jobs:
         include:
           - os: macos-latest
             sdk_triple: macos-arm64
-          - os: ubuntu-latest
+          - os: ubuntu-24.04
             sdk_triple: linux-x86_64
           - os: windows-2022
             sdk_triple: windows-x86_64
@@ -141,7 +141,7 @@ jobs:
     name: publish release assets (single tag)
     if: inputs.publish
     needs: [googletest]
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 10
     permissions:
       contents: write
